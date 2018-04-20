@@ -18,3 +18,7 @@ Point::Point(int x, int y) {
 
 Point::~Point() {
 }
+
+int getX(){
+    return this->x;
+}
