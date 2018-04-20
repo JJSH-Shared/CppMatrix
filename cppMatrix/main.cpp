@@ -12,6 +12,10 @@
  */
 
 #include <cstdlib>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <algorithm>
 #include "Matrix.h"
 
 using namespace std;
@@ -19,8 +23,37 @@ using namespace std;
 /*
  * 
  */
-int main(int argc, char** argv) {
+int main(int argc, char** argv)
+{
+    string input;
+    while (true)
+    {
+        printMenu();
+        cin >> input;
+        transform(input.begin(), input.end(), input.begin(), ::tolower);
+        switch (input)
+        {
+            case "c":
+                break;
+            case "l":
+                break;
+            case "q":
+                exit(0);
+                break;
+        }
+    }
+}
 
-    return 0;
+void printMenu()
+{
+    stringstream menu;
+    menu << "MATRIX" << endl;
+    menu << "========" << endl;
+    menu << "(C) Create new matrix" << endl;
+    menu << "(L) List matrixes" << endl;
+    menu << "(Q) Quit" << endl;
+    menu << endl;
+    menu << "Command: ";
+    cout << menu.str();
 }
 
