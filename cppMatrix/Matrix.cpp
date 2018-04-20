@@ -28,8 +28,8 @@ Matrix::~Matrix() {
 }
 
 void Matrix::set(int x, int y, int v){
-    if (x > maxCols){maxRows = x;}
-    if (y > maxRows){maxCols = y;}
+    if (x > this->maxCols){this->maxRows = x;}
+    if (y > this->maxRows){this->maxCols = y;}
     
     this->matrix[Point(x,y)] = v;
 }
