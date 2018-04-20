@@ -47,7 +47,7 @@ void Matrix::product(int co){
 }
 
 bool Matrix::sum(Matrix *o){
-    if (this->maxRows == o->maxRows && this->maxCols == o.maxRows){
+    if (this->maxRows == o->maxRows && this->maxCols == o->maxCols){
         for (int j=0; j<this->getRowCount(); j++){
             for (int i=0; i<this->getColCount(); i++){            
                 this->set(i,j, this->get(i,j) + o->get(i,j));
