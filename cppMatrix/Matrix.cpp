@@ -21,9 +21,6 @@ Matrix::Matrix() {
     this->maxCols = 0;
 }
 
-Matrix::Matrix(const Matrix& orig) {
-}
-
 Matrix::~Matrix() {
 }
 
@@ -78,9 +75,7 @@ void Matrix::print(){
     
 }
 
-std::string Matrix::toString(){
-    this->maxRows = 0;
-    this->maxCols = 0;
+std::string Matrix::toString() {
     
     stringstream tmp;
     tmp << this->maxRows << "X" << this->maxCols;
