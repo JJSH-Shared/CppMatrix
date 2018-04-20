@@ -36,7 +36,7 @@ void Matrix::set(int x, int y, int v){
 }
 
 int Matrix::get(int x, int y){
-    return matrix.[Point(x,y)];
+    return matrix[Point(x,y)];
 }
 
 void Matrix::product(int co){
