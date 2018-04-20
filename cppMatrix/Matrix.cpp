@@ -36,7 +36,7 @@ void Matrix::set(int x, int y, int v){
 }
 
 int Matrix::get(int x, int y){
-    return matrix[Point(x,y)];
+    return matrix.at(Point(x,y));
 }
 
 void Matrix::product(int co){
@@ -47,10 +47,12 @@ void Matrix::product(int co){
 }
 
 bool Matrix::sum(Matrix *o){
-    for (int j=0; j<this->getRowCount(); j++){
-        for (int i=0; i<this->getColCount(); i++){
-            this->set(i,j, this->get(i,j) + o->get(i,j));
-        }
+    if (this->maxRows == o->maxRows && this->maxCols == o.maxRows){
+        for (int j=0; j<this->getRowCount(); j++){
+            for (int i=0; i<this->getColCount(); i++){            
+                this->set(i,j, this->get(i,j) + o->get(i,j));
+            }
+        }        
     }
 }
 
