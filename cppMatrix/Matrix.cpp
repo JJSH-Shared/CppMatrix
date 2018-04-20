@@ -17,6 +17,8 @@
 using namespace std;
 
 Matrix::Matrix() {
+    this->maxRows = 0;
+    this->maxCols = 0;
 }
 
 Matrix::Matrix(const Matrix& orig) {
