@@ -44,8 +44,8 @@ public:
 private:
     std::map<Point, int, pointComparator> matrix;
     
-    int maxRows = 0;
-    int maxCols = 0;
+    int maxRows;
+    int maxCols;
     
 };
 
