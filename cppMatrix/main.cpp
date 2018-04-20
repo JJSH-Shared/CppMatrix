@@ -101,7 +101,12 @@ int main(int argc, char** argv)
                             printSelectMatrix();
                             cin >> select;
                             selection = atoi(select.c_str());
+                            target->print();
+                            cout << "++++" << endl;
+                            matrixes.at(selection).print();
+                            cout << "===" << endl;
                             target->sum(matrixes.at(selection));
+                            target->print();
                         }
                         else if (input == "p")
                         {
