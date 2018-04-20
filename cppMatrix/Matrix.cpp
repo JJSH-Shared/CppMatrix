@@ -81,6 +81,7 @@ void Matrix::print(){
 std::string Matrix::toString(){
     stringstream tmp;
     tmp << this->maxRows << "X" << this->maxCols;
+    cout << tmp;
     return tmp.str();
     
 }
