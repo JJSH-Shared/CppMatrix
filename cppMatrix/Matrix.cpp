@@ -34,8 +34,12 @@ int Matrix::get(int x, int y){
 }
 
 void Matrix::product(int co){
-
+    for(std::map<Point, int>::iterator it = this->matrix.begin(); it != this->matrix.end(); it++)
+    {
+        it->second *= co;
+    }
 }
+
 bool Matrix::sum(Matrix o){
 }
 
@@ -60,5 +64,12 @@ void Matrix::print(){
             cout << ("%d", this->get(i,j));
         }
     }
+    
+}
+
+std::string Matrix::toString(){
+    stringstream tmp;
+    tmp << this->maxRows << "X" << this->maxCols;
+    return tmp.str();
     
 }
