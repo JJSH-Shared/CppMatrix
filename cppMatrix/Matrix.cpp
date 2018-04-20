@@ -26,9 +26,12 @@ Matrix::~Matrix() {
 }
 
 void Matrix::set(int x, int y, int v){
+    if (x > maxCols){maxRows = x;}
+    if (y > maxRows){maxCols = y;}
     
     this->matrix[Point(x,y)] = v;
 }
+
 int Matrix::get(int x, int y){
     return matrix[Point(x,y)];
 }
@@ -41,6 +44,12 @@ void Matrix::product(int co){
 }
 
 bool Matrix::sum(Matrix o){
+    for(std::map<Point, int>::iterator it = this->matrix.begin(); it != this->matrix.end(); it++)
+    {
+        it->second += 1;
+    }
+    
+    
 }
 
 int Matrix::getRowCount(){
