@@ -19,8 +19,12 @@ public:
     Point(int x, int y);
     virtual ~Point();
     
-    getX();
-    getY();
+    int getX() const;
+    int getY() const;
+    
+    bool operator<(const Point a) const{
+        return this->x < a.x || (this->x == a.x && this->y < a.y);
+    }
     
 private:
     int x;

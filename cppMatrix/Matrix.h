@@ -13,6 +13,15 @@
 #include "Point.h"
 #include <map>
 
+struct pointComparator {
+
+    bool operator()(const Point& a, const Point& b) const 
+    {
+        return (a < b);
+    }
+};
+
+
 #ifndef MATRIX_H
 #define MATRIX_H
 
@@ -22,18 +31,18 @@ public:
     Matrix(const Matrix& orig);
     virtual ~Matrix();
 
-    set(Point p, int v);
-    int get(Point p);
+    void set(int x, int y, int v);
+    int get(int x, int y);
     void product(int co);
     bool sum(Matrix o);
     int getRowCount();
     int getColCount();
     void print();
 private:
-    std::map<Point, int> matrix;
+    std::map<Point, int, pointComparator> matrix;
     
     int maxRows;
-    int MaxCols;
+    int maxCols;
     
 };
 

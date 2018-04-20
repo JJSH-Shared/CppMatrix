@@ -6,19 +6,28 @@
 
 /* 
  * File:   Point.cpp
- * Author: Sampo
+ * Author: Sampo Harjula, Joni Juntunen
  * 
  * Created on 20. huhtikuuta 2018, 11:18
  */
 
 #include "Point.h"
 
+using namespace std;
+
 Point::Point(int x, int y) {
+    this->x = x;
+    this->y = y;
 }
 
 Point::~Point() {
 }
 
-int getX(){
+int Point::getX() const{
     return this->x;
 }
+
+int Point::getY() const{
+    return this->y;
+}
+
