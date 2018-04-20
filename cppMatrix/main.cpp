@@ -16,7 +16,7 @@
 #include <sstream>
 #include <string>
 #include <algorithm>
-#include <list>
+#include <map>
 #include "Matrix.h"
 
 using namespace std;
@@ -29,7 +29,7 @@ int main(int argc, char** argv)
     void printMenu();
     
     string input;
-    list<Matrix> matrixes;
+    map<int,Matrix> matrixes;
     
     while (true)
     {
@@ -38,13 +38,13 @@ int main(int argc, char** argv)
         transform(input.begin(), input.end(), input.begin(), ::tolower);
         if (input == "c")
         {
-            matrixes.assign(1, new Matrix());
+            matrixes.insert(pair<int,Matrix>(matrixes.end()->first + 1, Matrix()));
         }
         else if(input == "l")
         {
-            for (list<Matrix>::iterator it = matrixes.begin(); it != matrixes.end(); it++) 
+            for (map<int,Matrix>::iterator it = matrixes.begin(); it != matrixes.end(); it++) 
             {
-                cout << it->toString() << endl;
+                cout << it->first << ": " << it->second.toString() << endl;
             }
         }
         if (input == "q")
