@@ -30,6 +30,19 @@ void Matrix::set(int x, int y, int v){
     
     if (v == 0 && this->get(x,y)){
         this->matrix.erase(Point(x,y));
+        
+        this->maxRows = 0;
+        this->maxCols = 0;
+        for(std::map<Point, int>::iterator it = this->matrix.begin(); it != this->matrix.end(); it++)
+        {
+            if (it->first.getX() > this->maxRows){
+                this->maxRows = it->first.getX();
+            }
+            if (it->first.getY() > this->maxCols){
+                this->maxCols = it->first.getY();
+            }
+        }
+        
     }else {
         this->matrix[Point(x,y)] = v;
     }
