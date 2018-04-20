@@ -5,22 +5,20 @@
  */
 
 /* 
- * File:   main.cpp
- * Author: Joni Juntunen, Sampo Harjula
- *
- * Created on April 20, 2018, 11:10 AM
+ * File:   Matrix.cpp
+ * Author: Sampo Harjula, Joni Juntunen
+ * 
+ * Created on 20. huhtikuuta 2018, 11:18
  */
 
-#include <cstdlib>
 #include "Matrix.h"
 
-using namespace std;
+Matrix::Matrix() {
+}
 
-/*
- * 
- */
-int main(int argc, char** argv) {
+Matrix::Matrix(const Matrix& orig) {
+}
 
-    return 0;
+Matrix::~Matrix() {
 }
 
