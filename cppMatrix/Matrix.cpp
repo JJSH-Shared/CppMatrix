@@ -35,11 +35,11 @@ void Matrix::set(int x, int y, int v){
         this->maxCols = 0;
         for(std::map<Point, int>::iterator it = this->matrix.begin(); it != this->matrix.end(); it++)
         {
-            if (it->first.getX() > this->maxRows){
-                this->maxRows = it->first.getX();
+            if (it->first.getY() > this->maxRows){
+                this->maxRows = it->first.getY();
             }
-            if (it->first.getY() > this->maxCols){
-                this->maxCols = it->first.getY();
+            if (it->first.getX() > this->maxCols){
+                this->maxCols = it->first.getX();
             }
         }
         
