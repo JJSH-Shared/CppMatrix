@@ -30,13 +30,12 @@ struct pointComparator {
 class Matrix {
 public:
     Matrix();
-    Matrix(const Matrix& orig);
     virtual ~Matrix();
 
     void set(int x, int y, int v);
     int get(int x, int y);
     void product(int co);
-    bool sum(Matrix o);
+    bool sum(Matrix *o);
     int getRowCount();
     int getColCount();
     void print();

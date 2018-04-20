@@ -28,7 +28,11 @@ void Matrix::set(int x, int y, int v){
     if (x > this->maxCols){this->maxCols = x;}
     if (y > this->maxRows){this->maxRows = y;}
     
-    this->matrix[Point(x,y)] = v;
+    if (v == 0 && this->get(x,y)){
+        this->matrix.erase(Point(x,y));
+    }else {
+        this->matrix[Point(x,y)] = v;
+    }
 }
 
 int Matrix::get(int x, int y){
@@ -42,13 +46,12 @@ void Matrix::product(int co){
     }
 }
 
-bool Matrix::sum(Matrix o){
-    for(std::map<Point, int>::iterator it = this->matrix.begin(); it != this->matrix.end(); it++)
-    {
-        it->second += 1;
+bool Matrix::sum(Matrix *o){
+    for (int j=0; j<this->getRowCount(); j++){
+        for (int i=0; i<this->getColCount(); i++){
+            this->set(i,j, this->get(i,j) + o->get(i,j));
+        }
     }
-    
-    
 }
 
 int Matrix::getRowCount(){
