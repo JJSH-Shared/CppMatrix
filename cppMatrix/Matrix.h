@@ -12,6 +12,8 @@
  */
 #include "Point.h"
 #include <map>
+#include <string>
+#include <sstream>
 
 struct pointComparator {
 
@@ -38,6 +40,7 @@ public:
     int getRowCount();
     int getColCount();
     void print();
+    std::string toString();
 private:
     std::map<Point, int, pointComparator> matrix;
     
