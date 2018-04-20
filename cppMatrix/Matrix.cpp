@@ -25,8 +25,8 @@ Matrix::~Matrix() {
 }
 
 void Matrix::set(int x, int y, int v){
-    if (x > this->maxCols){this->maxRows = x;}
-    if (y > this->maxRows){this->maxCols = y;}
+    if (x > this->maxCols){this->maxCols = x;}
+    if (y > this->maxRows){this->maxRows = y;}
     
     this->matrix[Point(x,y)] = v;
 }
