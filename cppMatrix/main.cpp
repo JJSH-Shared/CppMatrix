@@ -25,21 +25,23 @@ using namespace std;
  */
 int main(int argc, char** argv)
 {
+    void printMenu();
+    
     string input;
     while (true)
     {
         printMenu();
         cin >> input;
         transform(input.begin(), input.end(), input.begin(), ::tolower);
-        switch (input)
+        if (input == "c")
         {
-            case "c":
-                break;
-            case "l":
-                break;
-            case "q":
-                exit(0);
-                break;
+        }
+        else if(input == "l")
+        {
+        }
+        if (input == "q")
+        {
+            exit(0);
         }
     }
 }
