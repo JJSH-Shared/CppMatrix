@@ -69,8 +69,9 @@ int Matrix::getColCount(){
 void Matrix::print(){
     for (int j=0; j<this->getRowCount(); j++){
         for (int i=0; i<this->getColCount(); i++){
-            cout << ("%d", this->get(i,j));
+            cout << this->get(i,j);
         }
+        cout << endl;
     }
     
 }
