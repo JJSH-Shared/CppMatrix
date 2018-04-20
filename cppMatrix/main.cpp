@@ -6,7 +6,7 @@
 
 /* 
  * File:   main.cpp
- * Author: Joni Juntunen, Sampo Harjula
+ * Author: Joni Juntunen 1602178, Sampo Harjula 1602177
  *
  * Created on April 20, 2018, 11:10 AM
  */
