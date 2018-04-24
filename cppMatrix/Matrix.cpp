@@ -41,11 +41,11 @@ void Matrix::set(int x, int y, int v){
 
             if (it->first.getX() > this->maxCols && it->second != 0){
                 this->maxCols = it->first.getX();
-                // cout << "X switched" << endl;
+                //cout << "X switched" << endl;
             }
             if (it->first.getY() > this->maxRows && it->second != 0){
                 this->maxRows = it->first.getY();
-                // cout << "Y switched" << endl;
+                //cout << "Y switched" << endl;
             }
         }
         
@@ -55,7 +55,7 @@ void Matrix::set(int x, int y, int v){
 }
 
 int Matrix::get(int x, int y){
-    return matrix[Point(x,y)];
+    return this->matrix.find(Point(x,y);
 }
 
 void Matrix::product(int co){
