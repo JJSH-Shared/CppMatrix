@@ -39,11 +39,11 @@ void Matrix::set(int x, int y, int v){
                 cout << this->maxCols << ":" << it->first.getX() << endl;
                 cout << this->maxRows << ":" << it->first.getY() << endl;
 
-            if (it->first.getX() > this->maxCols){
+            if (it->first.getX() > this->maxCols && it->second != 0){
                 this->maxCols = it->first.getX();
                 cout << "X switched" << endl;
             }
-            if (it->first.getY() > this->maxRows){
+            if (it->first.getY() > this->maxRows && it->second != 0){
                 this->maxRows = it->first.getY();
                 cout << "Y switched" << endl;
             }
