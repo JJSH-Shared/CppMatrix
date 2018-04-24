@@ -36,8 +36,8 @@ void Matrix::set(int x, int y, int v){
         for(std::map<Point, int>::iterator it = this->matrix.begin(); it != this->matrix.end(); it++)
         {
 
-                cout << this->maxCols << ":" << it->first.getX() + << endl;
-                cout << this->maxRows << ":" << it->first.getY() + << endl;
+                cout << this->maxCols << ":" << it->first.getX() << endl;
+                cout << this->maxRows << ":" << it->first.getY() << endl;
 
             if (it->first.getX() > this->maxCols){
                 this->maxCols = it->first.getX();
