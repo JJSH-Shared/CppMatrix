@@ -49,8 +49,8 @@ void Matrix::set(int x, int y, int v){
             }
         }
         
-    }else {
-        this->matrix[Point(x,y)] = v;
+    }else if (v != 0) {
+        this->matrix[Point(x,y)] = v;        
     }
 }
 
