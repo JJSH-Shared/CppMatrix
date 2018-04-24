@@ -13,6 +13,7 @@
 #include "Matrix.h"
 
 #include <iostream>
+#include <valarray>
         
 using namespace std;
 
@@ -55,7 +56,14 @@ void Matrix::set(int x, int y, int v){
 }
 
 int Matrix::get(int x, int y){
-    return this->matrix.find(Point(x,y);
+    std:map<Point,int>::iterator it = this->matrix.find(Point(x,y));
+    
+    if (it == this->matrix.end()){
+        return 0;
+    }else {
+        return it->second;
+    }
+    
 }
 
 void Matrix::product(int co){
